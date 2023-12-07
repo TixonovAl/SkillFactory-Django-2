@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>
+    All products
+</h1>
+
+{% if products %}
+{% for product in products %}
+<div>
+
+{{product.name}}
+{{product.price}}
+{{product.type}}
+{{product.description}}
+</div>
+{% endfor %}
+
+{% else %}
+<h3>
+    Сорян, но продуктов нет
+</h3>
+{% endif %}
+
+{% endblock content %}
